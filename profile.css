@@ -1,0 +1,64 @@
+/*
+This contains all the styles for the SMS program
+*/
+/*
+    Created on : 22 Feb 2017, 12:41:12 PM
+    Author     : Johannes
+*/
+
+* { /*formats all text in website*/
+    font-family:helvitica sans-serif;
+    font-size: 10pt;
+
+}
+
+h1 {
+    font-size: 12pt;
+    background-color: lightgray;
+}
+
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/*input {
+    width: 250px;
+}*/
+
+
+label {
+    float: left;
+    width: 200px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid black;
+    font-size: 12px;
+
+}
+
+.label_width {
+    width:200px;
+}
+
+/*.column {
+    float: left;
+    width: 50%;
+}*/
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
