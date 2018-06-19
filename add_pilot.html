@@ -1,0 +1,395 @@
+<html>
+    <head>
+        <title>Add Pilot</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="form_style.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Datepicker section -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script>
+
+            $(function() {
+            $(".datepicker").datepicker({dateFormat:"dd/mm/yy"});
+            });
+        </script>
+
+
+    </head>
+    <body>
+        <div>
+            <section>
+                <form id="add_pilot_form" action="add_pilot.php" method="POST">
+                <h1 align="center">Add Pilot</h1>
+
+                <p>
+                    <label for="pilot_name" class="label_width">
+                        <span>Pilot Name: </span>
+                    </label>
+                    <input type="text" id="pilot_name" name="pilot_name" class="label_width">
+                </p>
+
+                <p>
+                    <label for="pilot_surname" class="label_width" >
+                        <span>Pilot Surname: </span>
+                    </label>
+                    <input type="text" id="pilot_surname" name="pilot_surname" class="label_width">
+                </p>
+
+                <p>
+                    <label for="start_date" class="label_width">
+                        <span>Start Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="start_date" name="start_date">
+                </p>
+
+                <p>
+                    <label for="contract_end_date" class="label_width">
+                        <span>Contract End Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="contract_end_date" name="contract_end_date">
+                </p>
+
+                <p>
+                    <label for="online_date" class="label_width">
+                        <span>On-Line Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="online_date" name="online_date">
+                </p>
+
+                <p>
+                    <label for="online_turbine" class="label_width">
+                        <span>On-Line Turbine:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="online_turbine" name="online_turbine">
+                </p>
+
+                <p>
+                    <label for="turbine_bond_end" class="label_width">
+                        <span>Turbine Bond End:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="turbine_bond_end" name="turbine_bond_end">
+                </p>
+
+                <p>
+                    <label for="first_salary_increase" class="label_width">
+                        <span>First Salary Increase:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="first_salary_increase" name="first_salary_increase">
+                </p>
+
+                <p>
+                    <label for="second_salary_increase" class="label_width">
+                        <span>Second Salary Increase:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="second_salary_increase" name="second_salary_increase">
+                </p>
+
+                <p>
+                    <label for="third_salary_increase" class="label_width">
+                        <span>Third Salary Increase:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="third_salary_increase" name="third_salary_increase">
+                </p>
+
+                <p>
+                    <label for="bots_medical" class="label_width">
+                        <span>Date of Botswana Medical:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="bots_medical" name="bots_medical">
+                </p>
+
+                <p>
+                    <label for="foreign_medical" class="label_width">
+                        <span>Foreign Medical:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="foreign_medical" name="foreign_medical">
+                </p>
+
+                <p>
+                    <label for="check_pilot" class="label_width">
+                        <span>Check Pilot:</span>
+                    </label>
+                    <input type="checkbox" id="check_pilot" name="check_pilot" class="label_width" value="true">
+                </p>
+
+                <p>
+                    <label for="check_pilot_flight" class="label_width">
+                        <span>Check Pilot Flight:</span>
+                    </label>
+
+                    <input type="checkbox" id="check_pilot_flight" name="check_pilot_flight" class="label_width" value="true">
+                </p>
+
+                <p>
+                    <label for="check_pilot_gb" class="label_width">
+                        <span>Check Pilot Ground Briefing:</span>
+                    </label>
+                    <input type="checkbox" id="check_pilot_gb" name="check_pilot_gb" class="label_width" value="true">
+                </p>
+
+                <p>
+                    <label for="check_pilot_exp" class="label_width">
+                        <span>Check Pilot Expiry:</span>
+                    </label>
+                    <input type="text" id="check_pilot_exp" name="check_pilot_exp" class="datepicker">
+                </p>
+
+                <p>
+                    <label for="sa_inst_rating" class="label_width">
+                        <span>Foreign Instructors Rating Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="sa_inst_rating" name="sa_inst_rating">
+                </p>
+
+                <p>
+                    <label for="bots_inst_rating" class="label_width">
+                        <span>Botswana Instructors Rating Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="bots_inst_rating" name="bots_inst_rating">
+                </p>
+
+                <p>
+                    <label for="dpe_exp" class="label_width">
+                        <span>Designated Pilot Examiner Expiry Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="dpe_exp" name="dpe_exp">
+                </p>
+
+                <p>
+                    <label for="ga8_lpc" class="label_width">
+                        <span>GA-8 LPC Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="ga8_lpc" name="ga8_lpc">
+                </p>
+
+                <p>
+                    <label for="ga8_lpc_exp" class="label_width">
+                        <span>GA-8 LPC Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="ga8_lpc_exp" name="ga8_lpc_exp">
+                </p>
+
+                <p>
+                    <label for="c208_lpc" class="label_width">
+                        <span>C208 LPC Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="c208_lpc" name="c208_lpc" >
+                </p>
+
+                <p>
+                    <label for="c208_lpc_exp" class="label_width">
+                        <span>C208 LPC Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="c208_lpc_exp" name="c208_lpc_exp">
+                </p>
+
+                <p>
+                    <label for="kodi_lpc" class="label_width">
+                        <span>KODI LPC Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="kodi_lpc" name="kodi_lpc" >
+                </p>
+
+                <p>
+                    <label for="kodi_lpc_exp" class="label_width">
+                        <span>C208 LPC Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="kodi_lpc_exp" name="kodi_lpc_exp" >
+                </p>
+
+                <p>
+                    <label for="last_opc" class="label_width">
+                        <span>Last OPC:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="last_opc" name="last_opc" >
+                </p>
+
+                <p>
+                    <label for="opc_expiry" class="label_width">
+                        <span>OPC Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="opc_expiry" name="opc_expiry" >
+                </p>
+
+                <p>
+                    <label for="route_check" class="label_width">
+                        <span>Last Route Check:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="route_check" name="route_check">
+                </p>
+
+                <p>
+                    <label for="route_check_exp" class="label_width">
+                        <span>Route Check Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="route_check_exp" name="route_check_exp" >
+                </p>
+
+
+                <p>
+                    <label for="foreign_licno" class="label_width">
+                        <span>Foreign License Number:</span>
+                    </label>
+                    <input type="text" id="foreign_licno" name="foreign_licno" class="label_width">
+                </p>
+
+                <p>
+                    <label for="foreign_cpl_exp" class="label_width">
+                        <span>Foreign CPL Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="foreign_cpl_exp" name="foreign_cpl_exp" style="width:200" >
+                </p>
+
+                <p>
+                    <label for="foreign_lic_exp" class="label_width">
+                        <span>Foreign Licence Expiry:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="foreign_lic_exp" name="foreign_lic_exp" style="width:200">
+                </p>
+
+                <p>
+                    <label for="val_no" class="label_width">
+                        <span>Validation Number:</span>
+                    </label>
+                    <input type="text" id="val_no" name="val_no" class="label_width">
+                </p>
+
+                <p>
+                    <label for="val_exp" class="label_width">
+                        <span>Validation Expiry Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="val_exp" name="val_exp" style="width:200">
+                </p>
+
+                <p>
+                    <label for="bots_licno" class="label_width">
+                        <span>Botswana License Number:</span>
+                    </label>
+                    <input type="text" id="bots_licno" name="bots_licno" style="width:200">
+                </p>
+
+                <p>
+                    <label for="work_permit" class="label_width">
+                        <span>Work Permit Expiry Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="work_permit" name="work_permit" style="width:200">
+                </p>
+
+                <p>
+                    <label for="res_permit" class="label_width">
+                        <span>Residence Permit Expiry Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="res_permit" name="res_permit" style="width:200">
+                </p>
+
+                <p>
+                    <label for="citizen" class="label_width">
+                        <span>Citizen:</span>
+                    </label>
+                    <input type="checkbox" id="citizen" name="citizen" style="width:200" value="true">
+                </p>
+
+                <p>
+                    <label for="crm_exp" class="label_width">
+                        <span>CRM Expiry Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="crm_exp" name="crm_exp" style="width:200">
+                </p>
+
+                <p>
+                    <label for="dg_exp" class="label_width">
+                        <span>DG Expiry Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="dg_exp" name="dg_exp" style="width:200">
+                </p>
+
+                <p>
+                    <label for="sept_exp" class="label_width">
+                        <span>SEPT Expiry Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="sept_exp" name="sept_exp" style="width:200">
+                </p>
+
+                <p>
+                    <label for="ops_manual_intro" class="label_width">
+                        <span>Operations Manual Intro Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="ops_manual_intro" name="ops_manual_intro" style="width:200">
+                </p>
+
+                <p>
+                    <label for="g500" class="label_width">
+                        <span>G500:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="g500" name="g500" style="width:200">
+                </p>
+
+                <p>
+                    <label for="sms_intro" class="label_width">
+                        <span>SMS Intro Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="sms_intro" name="sms_intro" style="width:200">
+                </p>
+
+                <p>
+                    <label for="mel_intro" class="label_width">
+                        <span>MEL Intro Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="mel_intro" name="mel_intro" style="width:200">
+                </p>
+
+                <p>
+                    <label for="avsec" class="label_width">
+                        <span>Avsec Intro Date:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="avsec" name="avsec" style="width:200">
+                </p>
+
+                <p>
+                    <label for="dob" class="label_width">
+                        <span>Date of Birth:</span>
+                    </label>
+                    <input class="datepicker" type="text" id="dob" name="dob" style="width:200">
+                </p>
+
+                <p>
+                    <label for="email" class="label_width">
+                        <span>Email:</span>
+                    </label>
+                    <input type="text" id="email" name="email" style="width:200">
+                </p>
+
+                <p>
+                    <label for="password" class="label_width">
+                        <span>Password:</span>
+                    </label>
+                    <input type="text" id="password" name="password" style="width:200">
+                </p>
+
+                <p>
+                    <label for="role" class="label_width">
+                        <span>Role:</span>
+                    </label>
+                    <select type="text" id="role" name="role" style="width:200">
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                  </select>
+                </p>
+
+
+                <p> <input type="submit" value="Add Pilot"></p>
+
+            </form>
+        </section>
+        </div>
+
+
+
+    </body>
+</html>
