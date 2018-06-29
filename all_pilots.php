@@ -136,7 +136,7 @@ echo "<br><br><br>";
               var expDate = $(this).text();
               var now = dateNow();
 
-
+	      if(expDate != "0000-00-00"){ 	
               if(now > expDate) {
                 $(this).css('color','red');
                 $(this).css('font-weight','bold');
@@ -146,6 +146,7 @@ echo "<br><br><br>";
                 $(this).css('color','orange');
                 $(this).css('font-weight','bold');
               }
+             } 
 
             });
 

@@ -98,10 +98,22 @@ if(isset($_POST['submitme'])) //if the form is submitted, do the following
 	$avsec = date_to_mysql(sanatizeString($_POST["avsec"]));
 	$dob = date_to_mysql(sanatizeString($_POST["dob"]));
 	$email = sanatizeString($_POST["email"]);
-	$password = sanatizeString($_POST["password"]);
-	$stored_password =md5(trim($password));
-	$role = sanatizeString($_POST["role"]);
+	
+	if(isset($_POST['change_password']))
+	 {
+	  $password = sanatizeString($_POST["password"]);
+	  $stored_password =md5(trim($password));
+	 }
+	 else {
+	  $stored_password = $_POST["password"];
+	 }
 
+	if(isset($_POST['change_user']))
+	 {
+          $role = sanatizeString($_POST["role"]);
+	 }
+	  
+           
 
 	queryMysql("UPDATE pilot_info SET id='$id',"
 
@@ -287,7 +299,7 @@ if(isset($_POST['submitme'])) //if the form is submitted, do the following
                         <span>Check Pilot Flight:</span>
                     </label>
 
-                    <input type="checkbox" id="check_pilot_flight" name="check_pilot_flight" class="label_width"  <?php if($query2['check_pilot_flight'] == 1) echo 'checked="checked"';?>">
+                    <input type="checkbox" id="check_pilot_flight" name="check_pilot_flight" class="label_width"  <?php if($query2['check_pilot_flight'] == 1) echo 'checked="checked"';?>>
                 </p>
 
                 <p>
@@ -534,6 +546,7 @@ if(isset($_POST['submitme'])) //if the form is submitted, do the following
                         <span>Password:</span>
                     </label>
                     <input type="text" id="password" name="password" style="width:200" value="<?php echo $query2['password'];?>">
+		    <input type="checkbox" id="change_password" name="change_password">click to change password
                 </p>
 
                 <p>
@@ -541,9 +554,10 @@ if(isset($_POST['submitme'])) //if the form is submitted, do the following
                         <span>Role:</span>
                     </label>
                     <select type="text" id="role" name="role" style="width:200" value="<?php echo $query2['role'];?>">
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
-									</select>
+                    	<option value="admin">Admin</option>
+                    	<option value="user">User</option>
+    	            </select>
+		    <input type="checkbox" id="change_user" name="change_user">click to change user
                 </p>
 
 
